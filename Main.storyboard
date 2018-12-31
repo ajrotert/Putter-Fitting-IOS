@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3406" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="10">
+                                <rect key="frame" x="16" y="510" width="343" height="193"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="231" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Next_Clicked:" destination="BYZ-38-t0r" id="5397" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <pickerView contentMode="top" id="792" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="261" width="343" height="162"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="993" translatesAutoresizingMaskIntoConstraints="NO" text="Title" fixedFrame="YES">
+                                <rect key="frame" x="16" y="224" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1200" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="1202" id="1201" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="BYZ-38-t0r" id="1203" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Putter Fitting IOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1207" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="39" width="343" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="31"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1212" translatesAutoresizingMaskIntoConstraints="NO" text="Importance Level" fixedFrame="YES">
+                                <rect key="frame" x="16" y="473" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="17" id="1420" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" fixedFrame="YES">
+                                <rect key="frame" x="139" y="514" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" keyboardType="numbersAndPunctuation"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1438" translatesAutoresizingMaskIntoConstraints="NO" text="(1-5)" fixedFrame="YES">
+                                <rect key="frame" x="16" y="552" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1439" translatesAutoresizingMaskIntoConstraints="NO" text="5: Most Important   |  1: Least Important" fixedFrame="YES">
+                                <rect key="frame" x="16" y="578" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1456" translatesAutoresizingMaskIntoConstraints="NO" text="Putting Characteristic" fixedFrame="YES">
+                                <rect key="frame" x="16" y="184" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <pickerView contentMode="top" id="3364" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="151" width="343" height="162"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3365" translatesAutoresizingMaskIntoConstraints="NO" text="Results:" fixedFrame="YES">
+                                <rect key="frame" x="16" y="122" width="343" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3377" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="16" y="464" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="3379" id="3378" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="3381" id="3380" eventType="touchUpInside"/>
+                                    <action selector="ShowMore_Clicked:" destination="BYZ-38-t0r" id="4937" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Show More">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3382" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="231" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="3384" id="3383" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="3386" id="3385" eventType="touchUpInside"/>
+                                    <action selector="StartOver_Clicked:" destination="BYZ-38-t0r" id="4939" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3387" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="231" y="464" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="3389" id="3388" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="3391" id="3390" eventType="touchUpInside"/>
+                                    <action selector="MyDetails_Clicked:" destination="BYZ-38-t0r" id="4938" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="My Details">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3436" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="..." numberOfLines="2">
+                                <rect key="frame" x="16" y="321" width="343" height="135"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="SelectedButton" destination="197" id="name-outlet-197"/>
+                        <outlet property="OptionsList" destination="792" id="name-outlet-792"/>
+                        <outlet property="TitleLable" destination="993" id="name-outlet-993"/>
+                        <outlet property="ImportanceLevelLabel" destination="1212" id="name-outlet-1212"/>
+                        <outlet property="ImportanceTextBox" destination="1420" id="name-outlet-1420"/>
+                        <outlet property="OneToFiveLabel" destination="1438" id="name-outlet-1438"/>
+                        <outlet property="HighLowLabel" destination="1439" id="name-outlet-1439"/>
+                        <outlet property="BackButton" destination="1200" id="name-outlet-1200"/>
+                        <outlet property="PCTitle" destination="1456" id="name-outlet-1456"/>
+                        <outlet property="ResultsView" destination="3364" id="name-outlet-3364"/>
+                        <outlet property="ResultsTitleLabel" destination="3365" id="name-outlet-3365"/>
+                        <outlet property="ShowMoreButton" destination="3377" id="name-outlet-3377"/>
+                        <outlet property="StartOverButton" destination="3382" id="name-outlet-3382"/>
+                        <outlet property="ShowMyDetailsButton" destination="3387" id="name-outlet-3387"/>
+                        <outlet property="ShowMoreLabel" destination="3406" id="name-outlet-3406"/>
+                        <outlet property="PutterSpecsLabel" destination="3436" id="name-outlet-3436"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
