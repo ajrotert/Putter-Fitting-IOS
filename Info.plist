@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleName</key>
-	<string>IOSApp</string>
 	<key>CFBundleIdentifier</key>
 	<string>Step4.IOSApp</string>
 	<key>CFBundleShortVersionString</key>
@@ -34,5 +32,7 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>CFBundleName</key>
+	<string>Putter Fitter</string>
 </dict>
 </plist>
