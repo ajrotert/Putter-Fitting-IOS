@@ -22,6 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="20797" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Background.png">
+                                <rect key="frame" x="0.0" y="0.0" width="1179" height="984"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <pickerView contentMode="top" id="3364" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="16" y="151" width="343" height="162"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -207,6 +211,7 @@
                                 <rect key="frame" x="16" y="39" width="344" height="58"/>
                                 <constraints>
                                     <constraint id="13693" firstAttribute="width" constant="344"/>
+                                    <constraint id="14372" firstAttribute="height" constant="58"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -294,5 +299,6 @@
     </scenes>
     <resources>
         <image name="PutterAILogo.png" width="344" height="58"/>
+        <image name="Background.png" width="3024" height="4032"/>
     </resources>
 </document>

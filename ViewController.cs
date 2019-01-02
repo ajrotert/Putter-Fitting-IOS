@@ -23,19 +23,21 @@ namespace IOSApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            
             counter = 0;
             OLDM = new OptionsListDataModel(TitleLable);
             counter = OLDM.SetData(counter);
             OptionsList.Model = OLDM;
-            BackButton.RemoveFromSuperview();
+            OneToFiveLabel.RemoveFromSuperview();//cannot find
 
-            ResultsView.RemoveFromSuperview();
-            ResultsTitleLabel.RemoveFromSuperview();
-            ShowMoreButton.RemoveFromSuperview();
-            ShowMyDetailsButton.RemoveFromSuperview();
-            StartOverButton.RemoveFromSuperview();
-            ShowMoreLabel.RemoveFromSuperview();
-            PutterSpecsLabel.RemoveFromSuperview();
+            BackButton.Hidden = true;
+            ResultsView.Hidden = true;
+            ResultsTitleLabel.Hidden = true;
+            ShowMoreButton.Hidden = true;
+            ShowMyDetailsButton.Hidden = true;
+            StartOverButton.Hidden = true;
+            ShowMoreLabel.Hidden = true;
+            PutterSpecsLabel.Hidden = true;
 
             ImportanceTextBox.ShouldReturn = delegate {
             
@@ -53,7 +55,7 @@ namespace IOSApp
             OptionsList.Model = OLDM;
             ImportanceTextBox.Text = "5";
             if (counter == 1)
-                BackButton.RemoveFromSuperview();
+                BackButton.Hidden = true;
         }
 
         partial void Next_Clicked(UIButton sender)
@@ -92,7 +94,7 @@ namespace IOSApp
             }
             if(counter-1 == 1)
             {
-                View.AddSubview(BackButton);
+                BackButton.Hidden = false;
             }
 
         }
@@ -111,51 +113,54 @@ namespace IOSApp
         }
         public void ResultsSetup()
         {
-            PCTitle.RemoveFromSuperview();
-            TitleLable.RemoveFromSuperview();
-            OptionsList.RemoveFromSuperview();
-            ImportanceLevelLabel.RemoveFromSuperview();
-            ImportanceTextBox.RemoveFromSuperview();
-            OneToFiveLabel.RemoveFromSuperview();
-            HighLowLabel.RemoveFromSuperview();
-            BackButton.RemoveFromSuperview();
-            SelectedButton.RemoveFromSuperview();
+            PCTitle.Hidden = true;
+            TitleLable.Hidden = true;
+            OptionsList.Hidden = true;
+            ImportanceLevelLabel.Hidden = true;
+            ImportanceTextBox.Hidden = true;
+            OneToFiveLabel2.Hidden = true;
+            HighLowLabel.Hidden = true;
+            BackButton.Hidden = true;
+            SelectedButton.Hidden = true;
 
-            View.AddSubview(ResultsView);
-            View.AddSubview(ResultsTitleLabel);
-            View.AddSubview(ShowMoreButton);
-            View.AddSubview(ShowMyDetailsButton);
-            View.AddSubview(StartOverButton);
-            View.AddSubview(ShowMoreLabel);
-            View.AddSubview(PutterSpecsLabel);
+
+            ResultsView.Hidden = false;
+            ResultsTitleLabel.Hidden = false;
+            ShowMoreButton.Hidden = false;
+            ShowMyDetailsButton.Hidden = false;
+            StartOverButton.Hidden = false;
+            ShowMoreLabel.Hidden = false;
+            PutterSpecsLabel.Hidden = false;
         }
 
         partial void StartOver_Clicked(UIButton sender)
         {
-            View.AddSubview(PCTitle);
-            View.AddSubview(TitleLable);
-            View.AddSubview(OptionsList);
-            View.AddSubview(ImportanceLevelLabel);
-            View.AddSubview(ImportanceTextBox);
-            View.AddSubview(OneToFiveLabel);
-            View.AddSubview(HighLowLabel);
-            View.AddSubview(BackButton);
-            View.AddSubview(SelectedButton);
+            PCTitle.Hidden = false;
+            TitleLable.Hidden = false;
+            OptionsList.Hidden = false;
+            ImportanceLevelLabel.Hidden = false;
+            ImportanceTextBox.Hidden = false;
+            OneToFiveLabel2.Hidden = false;
+            HighLowLabel.Hidden = false;
+            BackButton.Hidden = false;
+            SelectedButton.Hidden = false;
 
             counter = 0;
             OLDM = new OptionsListDataModel(TitleLable);
             counter = OLDM.SetData(counter);
             OptionsList.Model = OLDM;
-            BackButton.RemoveFromSuperview();
+
+            BackButton.Hidden = true;
+
             ShowMoreLabel.Text = "";
 
-            ResultsView.RemoveFromSuperview();
-            ResultsTitleLabel.RemoveFromSuperview();
-            ShowMoreButton.RemoveFromSuperview();
-            ShowMyDetailsButton.RemoveFromSuperview();
-            StartOverButton.RemoveFromSuperview();
-            ShowMoreLabel.RemoveFromSuperview();
-            PutterSpecsLabel.RemoveFromSuperview();
+            ResultsView.Hidden = true;
+            ResultsTitleLabel.Hidden = true;
+            ShowMoreButton.Hidden = true;
+            ShowMyDetailsButton.Hidden = true;
+            StartOverButton.Hidden = true;
+            ShowMoreLabel.Hidden = true;
+            PutterSpecsLabel.Hidden = true;
         }
 
         partial void MyDetails_Clicked(UIButton sender)

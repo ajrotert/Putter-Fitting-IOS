@@ -181,7 +181,7 @@ namespace IOSApp
             }
             else if (_data[0] == "Left" && _data[3] == "Straight Back Straight Through")
             {
-                if (relativeImportance[0] > relativeImportance[3])
+                /*if (relativeImportance[0] > relativeImportance[3])
                 {
                     _putterBalance.importance = relativeImportance[0];
                     _putterBalance.putterTrait = "Toe Weighted";
@@ -192,7 +192,13 @@ namespace IOSApp
                     _putterBalance.importance = relativeImportance[3];
                     _putterBalance.putterTrait = "Face Balanced";
                     insertHeap(heap, ref last, _putterBalance);
-                }
+                }*/ //modified to seperate slant necks
+                if(relativeImportance[0] > relativeImportance[3])
+                    _putterBalance.importance = relativeImportance[0];
+                else
+                    _putterBalance.importance = relativeImportance[3];
+                _putterBalance.putterTrait = "Face Balance*";
+                insertHeap(heap, ref last, _putterBalance);
             }
 
             //Offset - 2

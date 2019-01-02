@@ -15,6 +15,10 @@ namespace IOSApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView AILogo { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton BackButton { get; set; }
 
         [Outlet]
@@ -35,11 +39,19 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel OneToFiveLabel2 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPickerView OptionsList { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel PCTitle { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView Putter_Fitter { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -99,6 +111,11 @@ namespace IOSApp
 
         void ReleaseDesignerOutlets ()
         {
+            if (AILogo != null) {
+                AILogo.Dispose ();
+                AILogo = null;
+            }
+
             if (BackButton != null) {
                 BackButton.Dispose ();
                 BackButton = null;
@@ -124,6 +141,11 @@ namespace IOSApp
                 OneToFiveLabel = null;
             }
 
+            if (OneToFiveLabel2 != null) {
+                OneToFiveLabel2.Dispose ();
+                OneToFiveLabel2 = null;
+            }
+
             if (OptionsList != null) {
                 OptionsList.Dispose ();
                 OptionsList = null;
@@ -132,6 +154,11 @@ namespace IOSApp
             if (PCTitle != null) {
                 PCTitle.Dispose ();
                 PCTitle = null;
+            }
+
+            if (Putter_Fitter != null) {
+                Putter_Fitter.Dispose ();
+                Putter_Fitter = null;
             }
 
             if (PutterSpecsLabel != null) {
