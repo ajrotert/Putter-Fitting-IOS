@@ -23,6 +23,10 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton BrandButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel HighLowLabel { get; set; }
 
         [Outlet]
@@ -48,6 +52,22 @@ namespace IOSApp
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel PCTitle { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel PlayCharLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel PlayErrorLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel PlayPrefLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView ProgressBar { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -87,11 +107,15 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel TitleLable { get; set; }
+        UIKit.UILabel TitleLabel { get; set; }
 
         [Action ("Back_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Back_Clicked (UIKit.UIButton sender);
+
+        [Action ("Brand_Clicked:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void Brand_Clicked (UIKit.UIButton sender);
 
         [Action ("MyDetails_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -119,6 +143,11 @@ namespace IOSApp
             if (BackButton != null) {
                 BackButton.Dispose ();
                 BackButton = null;
+            }
+
+            if (BrandButton != null) {
+                BrandButton.Dispose ();
+                BrandButton = null;
             }
 
             if (HighLowLabel != null) {
@@ -154,6 +183,26 @@ namespace IOSApp
             if (PCTitle != null) {
                 PCTitle.Dispose ();
                 PCTitle = null;
+            }
+
+            if (PlayCharLabel != null) {
+                PlayCharLabel.Dispose ();
+                PlayCharLabel = null;
+            }
+
+            if (PlayErrorLabel != null) {
+                PlayErrorLabel.Dispose ();
+                PlayErrorLabel = null;
+            }
+
+            if (PlayPrefLabel != null) {
+                PlayPrefLabel.Dispose ();
+                PlayPrefLabel = null;
+            }
+
+            if (ProgressBar != null) {
+                ProgressBar.Dispose ();
+                ProgressBar = null;
             }
 
             if (Putter_Fitter != null) {
@@ -201,9 +250,9 @@ namespace IOSApp
                 StartOverButton = null;
             }
 
-            if (TitleLable != null) {
-                TitleLable.Dispose ();
-                TitleLable = null;
+            if (TitleLabel != null) {
+                TitleLabel.Dispose ();
+                TitleLabel = null;
             }
         }
     }

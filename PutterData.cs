@@ -122,5 +122,38 @@ namespace IOSApp
                 putterFits[a] = temp[0];
             }
         }
+        private bool InArray(string[] array, string TestCase)
+        {
+            for(int a = 0; a<array.Length; a++)
+            {
+                if (array[a]!= null && array[a].Equals(TestCase))
+                    return true;
+            }
+            return false;
+        }
+
+        public string[] PutterBrands()
+        {
+            string[] brands;
+            string brand;
+            int counter = 0;
+            if(putterFits != null)
+            {
+                brands = new string[putterFits.Length];
+                for (int a = 0; a < putterFits.Length; a++)
+                {
+                    brand = putterFits[a].Substring(0, putterFits[a].IndexOf(' '));
+                    if(brand == "Scotty")
+                        brand = "Scotty Cameron";
+                    if (!InArray(brands, brand))
+                    {
+                        brands[counter] = brand;
+                        counter++;
+                    }
+                }
+                return brands;
+            }
+            return null;
+        }
     }
 }

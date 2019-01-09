@@ -1,6 +1,6 @@
 ﻿using System;
-
 using UIKit;
+using System.Collections.Generic;
 
 namespace IOSApp
 {
@@ -23,12 +23,15 @@ namespace IOSApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            
+
+            View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background6.png"));
+
             counter = 0;
-            OLDM = new OptionsListDataModel(TitleLable);
+            OLDM = new OptionsListDataModel(TitleLabel);
             counter = OLDM.SetData(counter);
             OptionsList.Model = OLDM;
             OneToFiveLabel.RemoveFromSuperview();//cannot find
+            ProgressBar.Progress = 0.1F;
 
             BackButton.Hidden = true;
             ResultsView.Hidden = true;
@@ -38,6 +41,10 @@ namespace IOSApp
             StartOverButton.Hidden = true;
             ShowMoreLabel.Hidden = true;
             PutterSpecsLabel.Hidden = true;
+            BrandButton.Hidden = true;
+
+            PlayPrefLabel.Hidden = true;
+            PlayErrorLabel.Hidden = true;
 
             ImportanceTextBox.ShouldReturn = delegate {
             
@@ -90,6 +97,17 @@ namespace IOSApp
                     counter = OLDM.SetData(counter);
                     OptionsList.Model = OLDM;
                     ImportanceTextBox.Text = "5";
+                    ProgressBar.Progress = (counter)/10F;
+                    if(ProgressBar.Progress == .4F)
+                    {
+                        PlayCharLabel.Hidden = true;
+                        PlayErrorLabel.Hidden = false;
+                    }
+                    else if (ProgressBar.Progress == .7F)
+                    {
+                        PlayErrorLabel.Hidden = true;
+                        PlayPrefLabel.Hidden = false;
+                    }
                 }
             }
             if(counter-1 == 1)
@@ -101,20 +119,60 @@ namespace IOSApp
 
         public void Start()
         {
+            ProgressBar.Progress = 1F;
             fit = new Algorithm(DataCollection, ImportanceCollection);
             results = fit.FindPutter();
             fit.setCharacteristic();
-            ResultsSetup();
-            ResultsTitleLabel.Text = "Results: ( " + results.Length + " )";
-            OLDM.SetData(results);
-            ResultsView.Model = OLDM;
-            PutterSpecsLabel.Text = "Length: " + fit.putter.PutterLength + Environment.NewLine +"Grip: " + fit.putter.PutterGrip;
+            //If results are greater than 3 provide question ten
+            if (results.Length > 3)
+            {
+                BrandButton.Hidden = false;
+                ImportanceLevelLabel.Hidden = true;
+                ImportanceTextBox.Hidden = true;
+                OneToFiveLabel2.Hidden = true;
+                HighLowLabel.Hidden = true;
+                BackButton.Hidden = true;
+                SelectedButton.Hidden = true;
+                TitleLabel.Text = "Brand";
+                OLDM.SetData(fit.putter.PutterBrands());
+                OptionsList.Model = OLDM;
+            }
+            else
+            {
+                ResultsSetup();
+                ResultsTitleLabel.Text = "Results: ( " + results.Length + " )";
+                OLDM.SetData(results);
+                ResultsView.Model = OLDM;
+                PutterSpecsLabel.Text = "Length: " + fit.putter.PutterLength + Environment.NewLine + "Grip: " + fit.putter.PutterGrip;
+            }
 
         }
+
+        partial void Brand_Clicked(UIButton sender)
+        {
+            OptionsList.Model.Selected(OptionsList, 0, 0);
+            string selected = OLDM.selected;
+            List<string> BrandResults = new List<string>();
+            for(int a = 0; a < results.Length; a++)
+            {
+                if (results[a].Contains(selected))
+                    BrandResults.Add(results[a]);
+            }
+            //UIAlertView _error = new UIAlertView("My Title Text", "" + BrandResults.Count, null, "Ok", null);
+            //_error.Show();
+            BrandButton.Hidden = true;
+
+            ResultsSetup();
+            ResultsTitleLabel.Text = "Results: ( " + BrandResults.Count + " )";
+            OLDM.SetData(BrandResults.ToArray());
+            ResultsView.Model = OLDM;
+            PutterSpecsLabel.Text = "Length: " + fit.putter.PutterLength + Environment.NewLine + "Grip: " + fit.putter.PutterGrip;
+        }
+
         public void ResultsSetup()
         {
             PCTitle.Hidden = true;
-            TitleLable.Hidden = true;
+            TitleLabel.Hidden = true;
             OptionsList.Hidden = true;
             ImportanceLevelLabel.Hidden = true;
             ImportanceTextBox.Hidden = true;
@@ -122,7 +180,11 @@ namespace IOSApp
             HighLowLabel.Hidden = true;
             BackButton.Hidden = true;
             SelectedButton.Hidden = true;
+            ProgressBar.Hidden = true;
 
+            PlayCharLabel.Hidden = true;
+            PlayPrefLabel.Hidden = true;
+            PlayErrorLabel.Hidden = true;
 
             ResultsView.Hidden = false;
             ResultsTitleLabel.Hidden = false;
@@ -135,8 +197,9 @@ namespace IOSApp
 
         partial void StartOver_Clicked(UIButton sender)
         {
+            ProgressBar.Progress = 0.1F;
             PCTitle.Hidden = false;
-            TitleLable.Hidden = false;
+            TitleLabel.Hidden = false;
             OptionsList.Hidden = false;
             ImportanceLevelLabel.Hidden = false;
             ImportanceTextBox.Hidden = false;
@@ -144,9 +207,11 @@ namespace IOSApp
             HighLowLabel.Hidden = false;
             BackButton.Hidden = false;
             SelectedButton.Hidden = false;
+            ProgressBar.Hidden = false;
+            PlayCharLabel.Hidden = false;
 
             counter = 0;
-            OLDM = new OptionsListDataModel(TitleLable);
+            OLDM = new OptionsListDataModel(TitleLabel);
             counter = OLDM.SetData(counter);
             OptionsList.Model = OLDM;
 
@@ -235,24 +300,24 @@ namespace IOSApp
 public class OptionsListDataModel : UIPickerViewModel
 {
     public string[,] listItems = new string[9, 4] {
+        {"Right Handed, Right Eye", "Right Handed, Left Eye", "Left Handed, Left Eye", "Left Handed, Right Eye"},
+        {"Greater than 6ft 6in", "Greater than 6ft", "Less than 6ft", "Less than 5ft 5in"},
+        {"Arcing Path", "Straight Back Straight Through", "", ""},
         {"Left", "Right", "Not Applicable", "" },                          //Used in the fitting functions to display options
         {"Long", "Short", "Not Applicable", ""},
-        {"Right Handed, Right Eye", "Right Handed, Left Eye", "Left Handed, Left Eye", "Left Handed, Right Eye"},
-        {"Arcing Path", "Straight Back Straight Through", "", ""},
+        {"Minimum", "Lots", "Unsure" ,""},
         {"Struggles with Alignment", "Alignment is Okay", "", ""},
-        {"Greather than 6ft 6in", "Greater than 6ft", "Less than 6ft", "Less than 5ft 5in"},
-        {"Wrist bend", "No Wrist Bend", "Not Applicable" ,""},
-        {"Standard Size Grip", "Larger Grip", "Not Applicable", ""},
-        {"Softer Feel", "Harder Feel", "Not Applicable", ""} };
+        {"Standard Size Grip", "Larger Grip", "Either-Or", ""},
+        {"Softer Feel", "Harder Feel", "Either-Or", ""} };
 
     public string[] listNames = new string[9] {
+        "Dominant Eye",
+        "Height",
+        "Swing Path",
         "Common L-R Miss",                                         //Used to display titles for the fitting functions
         "Common Distance Miss",
-        "Dominant Eye",
-        "Swing Path",
+        "Wrist Articulation",
         "Alignment",
-        "Height",
-        "Putter Head Movement",
         "Grip Perefrence",
         "Putter Head Feel"};
 

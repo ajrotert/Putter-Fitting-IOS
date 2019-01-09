@@ -1,45 +1,49 @@
 {
   "images": [
     {
-      "filename": "IOSLogo40x40.png",
+      "filename": "AILogo40-40.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
+      "filename": "AILogo60-60.png",
       "size": "20x20",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
-      "filename": "IOSLogo58x58.png",
+      "filename": "AILogo58-58.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
+      "filename": "AILogo87-87.png",
       "size": "29x29",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
+      "filename": "AILogo80-80.png",
       "size": "40x40",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "IOSLogo120x120.png",
+      "filename": "AILogo120-120.png",
       "size": "40x40",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
-      "filename": "IOSLogo120x120.png",
+      "filename": "AILogo120-120.png",
       "size": "60x60",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
+      "filename": "AILogo180-180.png",
       "size": "60x60",
       "scale": "3x",
       "idiom": "iphone"
@@ -50,7 +54,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "IOSLogo40x40.png",
+      "filename": "AILogo40-40.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "ipad"
@@ -61,7 +65,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "IOSLogo58x58.png",
+      "filename": "AILogo58-58.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "ipad"
@@ -72,11 +76,13 @@
       "idiom": "ipad"
     },
     {
+      "filename": "AILogo80-80.png",
       "size": "40x40",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
+      "filename": "AILogo167-167.png",
       "size": "83.5x83.5",
       "scale": "2x",
       "idiom": "ipad"
@@ -92,7 +98,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "IOSLogo1024.png",
+      "filename": "AILogo1024-1024.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "ios-marketing"
@@ -216,13 +222,11 @@
       "idiom": "mac"
     },
     {
-      "filename": "IOS5x5Logo.png",
       "size": "256x256",
       "scale": "2x",
       "idiom": "mac"
     },
     {
-      "filename": "IOS5x5Logo.png",
       "size": "512x512",
       "scale": "1x",
       "idiom": "mac"

@@ -22,10 +22,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="20797" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Background.png">
-                                <rect key="frame" x="0.0" y="0.0" width="1179" height="984"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3436" translatesAutoresizingMaskIntoConstraints="NO" text="..." numberOfLines="2">
+                                <rect key="frame" x="16" y="307" width="343" height="86"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="11474" firstAttribute="height" constant="86"/>
+                                </constraints>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="231" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Next_Clicked:" destination="BYZ-38-t0r" id="5397" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="6677" firstAttribute="width" constant="128"/>
+                                    <constraint id="6678" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22453" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="231" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Next_Clicked:" destination="22455" id="22454" eventType="touchUpInside"/>
+                                    <action selector="Brand_Clicked:" destination="BYZ-38-t0r" id="22460" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="22456" firstAttribute="width" constant="128"/>
+                                    <constraint id="22457" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
                             <pickerView contentMode="top" id="3364" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="16" y="151" width="343" height="162"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -91,70 +125,17 @@
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3436" translatesAutoresizingMaskIntoConstraints="NO" text="..." numberOfLines="2">
-                                <rect key="frame" x="16" y="307" width="343" height="86"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="11474" firstAttribute="height" constant="86"/>
-                                </constraints>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3382" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="231" y="735" width="128" height="30"/>
-                                <connections>
-                                    <action selector="Button_Clicked:" destination="3384" id="3383" eventType="touchUpInside"/>
-                                    <action selector="Back_Clicked:" destination="3386" id="3385" eventType="touchUpInside"/>
-                                    <action selector="StartOver_Clicked:" destination="BYZ-38-t0r" id="4939" eventType="touchUpInside"/>
-                                </connections>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Start Over">
-                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
-                                </state>
-                                <constraints>
-                                    <constraint id="6672" firstAttribute="width" constant="128"/>
-                                    <constraint id="6673" firstAttribute="height" constant="30"/>
-                                </constraints>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="197" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="231" y="735" width="128" height="30"/>
-                                <connections>
-                                    <action selector="Next_Clicked:" destination="BYZ-38-t0r" id="5397" eventType="touchUpInside"/>
-                                </connections>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
-                                </state>
-                                <constraints>
-                                    <constraint id="6677" firstAttribute="width" constant="128"/>
-                                    <constraint id="6678" firstAttribute="height" constant="30"/>
-                                </constraints>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="993" translatesAutoresizingMaskIntoConstraints="NO" text="Title">
                                 <rect key="frame" x="16" y="224" width="343" height="29"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                                 <constraints>
                                     <constraint id="13307" firstAttribute="width" constant="343"/>
                                     <constraint id="13309" firstAttribute="height" constant="29"/>
                                 </constraints>
+                                <color key="shadowColor" colorSpace="calibratedRGB" red="0.0784313725490196" green="1" blue="0" alpha="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1200" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="16" y="735" width="128" height="30"/>
-                                <connections>
-                                    <action selector="Button_Clicked:" destination="1202" id="1201" eventType="touchUpInside"/>
-                                    <action selector="Back_Clicked:" destination="BYZ-38-t0r" id="1203" eventType="touchUpInside"/>
-                                </connections>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
-                                </state>
-                                <constraints>
-                                    <constraint id="8179" firstAttribute="width" constant="128"/>
-                                    <constraint id="8180" firstAttribute="height" constant="30"/>
-                                </constraints>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Putter Fitting IOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1207" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="16" y="39" width="343" height="58"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="31"/>
@@ -214,6 +195,71 @@
                                     <constraint id="14372" firstAttribute="height" constant="58"/>
                                 </constraints>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.6" translatesAutoresizingMaskIntoConstraints="NO" id="22862">
+                                <rect key="frame" x="16" y="170" width="343" height="2"/>
+                                <constraints>
+                                    <constraint id="22863" firstAttribute="height" constant="2"/>
+                                </constraints>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0" green="1" blue="0.00392156862745098" alpha="1"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1200" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="1202" id="1201" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="BYZ-38-t0r" id="1203" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="8179" firstAttribute="width" constant="128"/>
+                                    <constraint id="8180" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3382" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="231" y="735" width="128" height="30"/>
+                                <connections>
+                                    <action selector="Button_Clicked:" destination="3384" id="3383" eventType="touchUpInside"/>
+                                    <action selector="Back_Clicked:" destination="3386" id="3385" eventType="touchUpInside"/>
+                                    <action selector="StartOver_Clicked:" destination="BYZ-38-t0r" id="4939" eventType="touchUpInside"/>
+                                </connections>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.011764705882352941" blue="0.25490196078431371" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="6672" firstAttribute="width" constant="128"/>
+                                    <constraint id="6673" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Characteristics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27549" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="122" width="344" height="20"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="1" blue="0.00392156862745098" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="28761" firstAttribute="height" constant="20"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Errors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27550" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="123" width="344" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="1" blue="0.00392156862745098" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="28765" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Preferences" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27551" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="122" width="344" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="1" blue="0.00392156862745098" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="28769" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint id="6300" firstItem="1207" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19"/>
@@ -268,12 +314,26 @@
                             <constraint id="13690" firstItem="13689" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="1"/>
                             <constraint id="13691" firstItem="13689" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
                             <constraint id="13692" firstItem="13689" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19"/>
+                            <constraint id="22461" firstAttribute="bottom" secondItem="22453" secondAttribute="bottom" constant="47"/>
+                            <constraint id="22462" firstItem="22453" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="22864" firstItem="13689" firstAttribute="trailing" secondItem="22862" secondAttribute="trailing" constant="1"/>
+                            <constraint id="22865" firstItem="22862" firstAttribute="leading" secondItem="13689" secondAttribute="leading"/>
+                            <constraint id="27139" firstItem="22862" firstAttribute="top" secondItem="13689" secondAttribute="bottom" constant="73"/>
+                            <constraint id="28758" firstItem="27549" firstAttribute="top" secondItem="13689" secondAttribute="bottom" constant="25"/>
+                            <constraint id="28759" firstItem="27549" firstAttribute="leading" secondItem="13689" secondAttribute="leading"/>
+                            <constraint id="28760" firstItem="27549" firstAttribute="trailing" secondItem="13689" secondAttribute="trailing"/>
+                            <constraint id="28762" firstItem="27550" firstAttribute="top" secondItem="13689" secondAttribute="bottom" constant="26"/>
+                            <constraint id="28763" firstItem="27550" firstAttribute="leading" secondItem="13689" secondAttribute="leading"/>
+                            <constraint id="28764" firstItem="27550" firstAttribute="trailing" secondItem="1207" secondAttribute="trailing" constant="1"/>
+                            <constraint id="28766" firstItem="27551" firstAttribute="top" secondItem="13689" secondAttribute="bottom" constant="25"/>
+                            <constraint id="28767" firstItem="27551" firstAttribute="leading" secondItem="13689" secondAttribute="leading"/>
+                            <constraint id="28768" firstItem="27551" firstAttribute="trailing" secondItem="13689" secondAttribute="trailing"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="SelectedButton" destination="197" id="name-outlet-197"/>
                         <outlet property="OptionsList" destination="792" id="name-outlet-792"/>
-                        <outlet property="TitleLable" destination="993" id="name-outlet-993"/>
+                        <outlet property="TitleLabel" destination="993" id="name-outlet-993"/>
                         <outlet property="ImportanceLevelLabel" destination="1212" id="name-outlet-1212"/>
                         <outlet property="ImportanceTextBox" destination="1420" id="name-outlet-1420"/>
                         <outlet property="OneToFiveLabel" destination="1438" id="name-outlet-1438"/>
@@ -290,6 +350,11 @@
                         <outlet property="Putter_Fitter" destination="8bC-Xf-vdC" id="name-outlet-8bC-Xf-vdC"/>
                         <outlet property="OneToFiveLabel2" destination="7057" id="name-outlet-7057"/>
                         <outlet property="AILogo" destination="13689" id="name-outlet-13689"/>
+                        <outlet property="BrandButton" destination="22453" id="name-outlet-22453"/>
+                        <outlet property="ProgressBar" destination="22862" id="name-outlet-22862"/>
+                        <outlet property="PlayCharLabel" destination="27549" id="name-outlet-27549"/>
+                        <outlet property="PlayErrorLabel" destination="27550" id="name-outlet-27550"/>
+                        <outlet property="PlayPrefLabel" destination="27551" id="name-outlet-27551"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -299,6 +364,5 @@
     </scenes>
     <resources>
         <image name="PutterAILogo.png" width="344" height="58"/>
-        <image name="Background.png" width="3024" height="4032"/>
     </resources>
 </document>

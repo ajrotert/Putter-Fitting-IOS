@@ -131,55 +131,55 @@ namespace IOSApp
         {
             FindArrVal();
             //Alignment - 2
-            if (_data[4] == "Struggles with Alignment")
+            if (_data[6] == "Struggles with Alignment")
             {
-                _putterShape.importance = relativeImportance[4];
+                _putterShape.importance = relativeImportance[6];
                 _putterShape.putterTrait = "Wide Putter Head";
                 insertHeap(heap, ref last, _putterShape);
             }
             else
             {
-                _putterShape.importance = relativeImportance[4];
+                _putterShape.importance = relativeImportance[6];
                 _putterShape.putterTrait = "Normal Putter Head";
                 insertHeap(heap, ref last, _putterShape);
             }
 
             //Toe Hang vs Face Balanced Checks - 4
-            if ((_data[0] == "Left" && _data[3] == "Arcing Path") || (_data[0] == "Not Applicable" && _data[3] == "Arcing Path"))
+            if ((_data[3] == "Left" && _data[2] == "Arcing Path") || (_data[3] == "Not Applicable" && _data[2] == "Arcing Path"))
             {
-                if (relativeImportance[0] > relativeImportance[3])
+                if (relativeImportance[3] > relativeImportance[2])
                     _putterBalance.importance = relativeImportance[0];
                 else
-                    _putterBalance.importance = relativeImportance[3];
+                    _putterBalance.importance = relativeImportance[2];
                 _putterBalance.putterTrait = "Toe Weighted";
                 insertHeap(heap, ref last, _putterBalance);
             }
-            else if (_data[0] == "Right" && _data[3] == "Arcing Path")
+            else if (_data[3] == "Right" && _data[2] == "Arcing Path")
             {
-                if (relativeImportance[0] > relativeImportance[3])
+                if (relativeImportance[3] > relativeImportance[2])
                 {
-                    _putterBalance.importance = relativeImportance[0];
+                    _putterBalance.importance = relativeImportance[3];
                     _putterBalance.putterTrait = "Face Balanced";
                     insertHeap(heap, ref last, _putterBalance);
                 }
                 else
                 {
-                    _putterBalance.importance = relativeImportance[3];
+                    _putterBalance.importance = relativeImportance[2];
                     _putterBalance.putterTrait = "Toe Weighted";
                     insertHeap(heap, ref last, _putterBalance);
                 }
 
             }
-            else if ((_data[0] == "Right" && _data[3] == "Straight Back Straight Through") || (_data[0] == "Not Applicable" && _data[3] == "Straight Back Straight Through"))
+            else if ((_data[3] == "Right" && _data[2] == "Straight Back Straight Through") || (_data[3] == "Not Applicable" && _data[2] == "Straight Back Straight Through"))
             {
-                if (relativeImportance[0] > relativeImportance[3])
-                    _putterBalance.importance = relativeImportance[0];
-                else
+                if (relativeImportance[3] > relativeImportance[2])
                     _putterBalance.importance = relativeImportance[3];
+                else
+                    _putterBalance.importance = relativeImportance[2];
                 _putterBalance.putterTrait = "Face Balanced";
                 insertHeap(heap, ref last, _putterBalance);
             }
-            else if (_data[0] == "Left" && _data[3] == "Straight Back Straight Through")
+            else if (_data[3] == "Left" && _data[2] == "Straight Back Straight Through")
             {
                 /*if (relativeImportance[0] > relativeImportance[3])
                 {
@@ -193,48 +193,48 @@ namespace IOSApp
                     _putterBalance.putterTrait = "Face Balanced";
                     insertHeap(heap, ref last, _putterBalance);
                 }*/ //modified to seperate slant necks
-                if(relativeImportance[0] > relativeImportance[3])
-                    _putterBalance.importance = relativeImportance[0];
-                else
+                if(relativeImportance[3] > relativeImportance[2])
                     _putterBalance.importance = relativeImportance[3];
+                else
+                    _putterBalance.importance = relativeImportance[2];
                 _putterBalance.putterTrait = "Face Balance*";
                 insertHeap(heap, ref last, _putterBalance);
             }
 
             //Offset - 2
-            if (_data[2] == "Right Handed, Right Eye" || _data[2] == "Left Handed, Left Eye")
+            if (_data[0] == "Right Handed, Right Eye" || _data[0] == "Left Handed, Left Eye")
             {
-                _putterHosel.importance = relativeImportance[2];
+                _putterHosel.importance = relativeImportance[0];
                 _putterHosel.putterTrait = "Offset Shaft";
                 insertHeap(heap, ref last, _putterHosel);
             }
-            else if (_data[2] == "Right Handed, Left Eye" || _data[2] == "Left Handed, Right Eye")
+            else if (_data[0] == "Right Handed, Left Eye" || _data[0] == "Left Handed, Right Eye")
             {
-                _putterHosel.importance = relativeImportance[2];
+                _putterHosel.importance = relativeImportance[0];
                 _putterHosel.putterTrait = "Straight Shaft";
                 insertHeap(heap, ref last, _putterHosel);
             }
 
             //Length - 4
-            if (_data[5] == "Greather than 6ft 6in")
+            if (_data[1] == "Greater than 6ft 6in")
             {
                 temp.importance = 27;
                 temp.putterTrait = "36in";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[5] == "Greater than 6ft")
+            else if (_data[1] == "Greater than 6ft")
             {
                 temp.importance = 27;
                 temp.putterTrait = "35in";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[5] == "Less than 6ft")
+            else if (_data[1] == "Less than 6ft")
             {
                 temp.importance = 27;
                 temp.putterTrait = "34in";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[5] == "Less than 5ft 5in")
+            else if (_data[1] == "Less than 5ft 5in")
             {
                 temp.importance = 27;
                 temp.putterTrait = "33in";
@@ -242,19 +242,19 @@ namespace IOSApp
             }
 
             //Weight -3
-            if (_data[1] == "Long")
+            if (_data[4] == "Long")
             {
                 _putterWeight.importance = relativeImportance[1];
                 _putterWeight.putterTrait = "Lighter Weight";
                 insertHeap(heap, ref last, _putterWeight);
             }
-            else if (_data[1] == "Short")
+            else if (_data[4] == "Short")
             {
                 _putterWeight.importance = relativeImportance[1];
                 _putterWeight.putterTrait = "Heavier Weight";
                 insertHeap(heap, ref last, _putterWeight);
             }
-            else if (_data[1] == "Not Applicable")
+            else if (_data[4] == "Not Applicable")
             {
                 _putterWeight.importance = relativeImportance[1];
                 _putterWeight.putterTrait = "Standard Weight";
@@ -262,9 +262,9 @@ namespace IOSApp
             }
 
             //Grip -3X3
-            if (_data[6] == "Wrist bend" && _data[7] == "Standard Size Grip")
+            if (_data[5] == "Lots" && _data[7] == "Standard Size Grip")
             {
-                if (relativeImportance[6] > relativeImportance[7])
+                if (relativeImportance[5] > relativeImportance[7])
                 {
                     temp.importance = 26;
                     temp.putterTrait = "Larger Grip";
@@ -276,49 +276,49 @@ namespace IOSApp
                 }
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "Wrist bend" && _data[7] == "Larger Grip")
+            else if (_data[5] == "Lots" && _data[7] == "Larger Grip")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Larger Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "Wrist bend" && _data[7] == "Not Applicable")
+            else if (_data[5] == "Lots" && _data[7] == "Either-Or")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Larger Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "No Wrist Bend" && _data[7] == "Standard Size Grip")
+            else if (_data[5] == "Minimum" && _data[7] == "Standard Size Grip")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Standard Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "No Wrist Bend" && _data[7] == "Larger Grip")
+            else if (_data[5] == "Minimum" && _data[7] == "Larger Grip")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Larger Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "No Wrist Bend" && _data[7] == "Not Applicable")
+            else if (_data[5] == "Minimum" && _data[7] == "Either-Or")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Standard Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "Not Applicable" && _data[7] == "Standard Size Grip")
+            else if (_data[5] == "Unsure" && _data[7] == "Standard Size Grip")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Standard Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "Not Applicable" && _data[7] == "Larger Grip")
+            else if (_data[5] == "Unsure" && _data[7] == "Larger Grip")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Larger Grip";
                 insertHeap(heap, ref last, temp);
             }
-            else if (_data[6] == "Not Applicable" && _data[7] == "Not Applicable")
+            else if (_data[5] == "Unsure" && _data[7] == "Either-Or")
             {
                 temp.importance = 26;
                 temp.putterTrait = "Standard Grip";
