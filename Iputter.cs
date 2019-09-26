@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace IOSApp
 {
+    public enum coordinate
+    {
+        TopLeft,
+        TopRight,
+        BottomLeft,
+        BottomRight
+    };
     public struct node
     {
         public int importance;

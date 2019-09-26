@@ -23,7 +23,15 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton BrandButton { get; set; }
+        UIKit.UIButton BottomLeft_Button { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton BottomRight_Button { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel CenteringLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -39,15 +47,11 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel OneToFiveLabel { get; set; }
+        UIKit.UIButton InfoButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel OneToFiveLabel2 { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView OptionsList { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -87,10 +91,6 @@ namespace IOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton SelectedButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ShowMoreButton { get; set; }
 
         [Outlet]
@@ -109,21 +109,37 @@ namespace IOSApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel TitleLabel { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton TopLeft_Button { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton TopRight_Button { get; set; }
+
         [Action ("Back_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Back_Clicked (UIKit.UIButton sender);
 
-        [Action ("Brand_Clicked:")]
+        [Action ("BottomLeft_Button_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void Brand_Clicked (UIKit.UIButton sender);
+        partial void BottomLeft_Button_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("BottomRight_Button_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BottomRight_Button_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("ImortanceLevelChanged:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ImortanceLevelChanged (UIKit.UITextField sender);
+
+        [Action ("Info_Clicked:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void Info_Clicked (UIKit.UIButton sender);
 
         [Action ("MyDetails_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void MyDetails_Clicked (UIKit.UIButton sender);
-
-        [Action ("Next_Clicked:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void Next_Clicked (UIKit.UIButton sender);
 
         [Action ("ShowMore_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -132,6 +148,14 @@ namespace IOSApp
         [Action ("StartOver_Clicked:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void StartOver_Clicked (UIKit.UIButton sender);
+
+        [Action ("TopLeft_Button_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TopLeft_Button_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("TopRight_Button_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TopRight_Button_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -145,9 +169,19 @@ namespace IOSApp
                 BackButton = null;
             }
 
-            if (BrandButton != null) {
-                BrandButton.Dispose ();
-                BrandButton = null;
+            if (BottomLeft_Button != null) {
+                BottomLeft_Button.Dispose ();
+                BottomLeft_Button = null;
+            }
+
+            if (BottomRight_Button != null) {
+                BottomRight_Button.Dispose ();
+                BottomRight_Button = null;
+            }
+
+            if (CenteringLabel != null) {
+                CenteringLabel.Dispose ();
+                CenteringLabel = null;
             }
 
             if (HighLowLabel != null) {
@@ -165,19 +199,14 @@ namespace IOSApp
                 ImportanceTextBox = null;
             }
 
-            if (OneToFiveLabel != null) {
-                OneToFiveLabel.Dispose ();
-                OneToFiveLabel = null;
+            if (InfoButton != null) {
+                InfoButton.Dispose ();
+                InfoButton = null;
             }
 
             if (OneToFiveLabel2 != null) {
                 OneToFiveLabel2.Dispose ();
                 OneToFiveLabel2 = null;
-            }
-
-            if (OptionsList != null) {
-                OptionsList.Dispose ();
-                OptionsList = null;
             }
 
             if (PCTitle != null) {
@@ -225,11 +254,6 @@ namespace IOSApp
                 ResultsView = null;
             }
 
-            if (SelectedButton != null) {
-                SelectedButton.Dispose ();
-                SelectedButton = null;
-            }
-
             if (ShowMoreButton != null) {
                 ShowMoreButton.Dispose ();
                 ShowMoreButton = null;
@@ -253,6 +277,16 @@ namespace IOSApp
             if (TitleLabel != null) {
                 TitleLabel.Dispose ();
                 TitleLabel = null;
+            }
+
+            if (TopLeft_Button != null) {
+                TopLeft_Button.Dispose ();
+                TopLeft_Button = null;
+            }
+
+            if (TopRight_Button != null) {
+                TopRight_Button.Dispose ();
+                TopRight_Button = null;
             }
         }
     }

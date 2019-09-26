@@ -13,7 +13,23 @@ namespace IOSApp
 
         private string[] _data;
         private int[] _userImportance;
-        public static int[] importanceLevel = { 3, 2, 1, 5, 3, 0, 4, 0, 1 };
+        //public static int[] importanceLevel = { 3, 2, 1, 5, 3, 0, 4, 0, 1 }; //This needs to change with the changeing order
+/*Player Characteristics 
+3 Eyes dominate     1
+6 Height            0
+4 Swing path        5
+
+Player Errors
+1 Left right miss   3
+2 Distance miss     2
+7 wrist movement    4
+
+Player Preferences 
+5 Alignment         3
+8 grip              0
+9 feel              1
+10 brand*/
+        public static int[] importanceLevel = { 1, 0, 5, 3, 2, 4, 3, 0, 1 }; //This needs to change with the changeing order
         private int[] relativeImportance = new int[importanceLevel.Length];
         public const int HEAP_SIZE = 7;
         private int last = -1;
@@ -148,7 +164,7 @@ namespace IOSApp
             if ((_data[3] == "Left" && _data[2] == "Arcing Path") || (_data[3] == "Not Applicable" && _data[2] == "Arcing Path"))
             {
                 if (relativeImportance[3] > relativeImportance[2])
-                    _putterBalance.importance = relativeImportance[0];
+                    _putterBalance.importance = relativeImportance[3];
                 else
                     _putterBalance.importance = relativeImportance[2];
                 _putterBalance.putterTrait = "Toe Weighted";
@@ -170,7 +186,7 @@ namespace IOSApp
                 }
 
             }
-            else if ((_data[3] == "Right" && _data[2] == "Straight Back Straight Through") || (_data[3] == "Not Applicable" && _data[2] == "Straight Back Straight Through"))
+            else if ((_data[3] == "Right" && _data[2] == "Straight Path") || (_data[3] == "Not Applicable" && _data[2] == "Straight Path"))
             {
                 if (relativeImportance[3] > relativeImportance[2])
                     _putterBalance.importance = relativeImportance[3];
@@ -179,7 +195,7 @@ namespace IOSApp
                 _putterBalance.putterTrait = "Face Balanced";
                 insertHeap(heap, ref last, _putterBalance);
             }
-            else if (_data[3] == "Left" && _data[2] == "Straight Back Straight Through")
+            else if (_data[3] == "Left" && _data[2] == "Straight Path")
             {
                 /*if (relativeImportance[0] > relativeImportance[3])
                 {
@@ -244,19 +260,19 @@ namespace IOSApp
             //Weight -3
             if (_data[4] == "Long")
             {
-                _putterWeight.importance = relativeImportance[1];
+                _putterWeight.importance = relativeImportance[4];
                 _putterWeight.putterTrait = "Lighter Weight";
                 insertHeap(heap, ref last, _putterWeight);
             }
             else if (_data[4] == "Short")
             {
-                _putterWeight.importance = relativeImportance[1];
+                _putterWeight.importance = relativeImportance[4];
                 _putterWeight.putterTrait = "Heavier Weight";
                 insertHeap(heap, ref last, _putterWeight);
             }
             else if (_data[4] == "Not Applicable")
             {
-                _putterWeight.importance = relativeImportance[1];
+                _putterWeight.importance = relativeImportance[4];
                 _putterWeight.putterTrait = "Standard Weight";
                 insertHeap(heap, ref last, _putterWeight);
             }

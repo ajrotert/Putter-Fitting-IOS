@@ -36,7 +36,7 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Distribution: Andrew Rotert (N9WD753NH2)</CodesignKey>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
@@ -50,7 +50,9 @@
     <IpaIncludeArtwork></IpaIncludeArtwork>
     <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
     <OptimizePNGs></OptimizePNGs>
-    <CodesignProvision>Putter Fitter Distribution</CodesignProvision>
+    <MtouchDebug></MtouchDebug>
+    <IOSDebuggerPort></IOSDebuggerPort>
+    <MtouchI18n></MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -74,7 +76,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: jeepwrangleraid@hotmail.com (FQXHR43G8Z)</CodesignKey>
+    <CodesignKey>iPhone Developer: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -86,7 +88,6 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -136,8 +137,38 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\PutterAILogo.png" />
-    <BundleResource Include="Resources\Background.png" />
     <BundleResource Include="Resources\Background6.png" />
+    <BundleResource Include="Resources\LoadingLogo6.png" />
+    <BundleResource Include="Resources\PF-LHRE.png" />
+    <BundleResource Include="Resources\PF-RHRE.png" />
+    <BundleResource Include="Resources\PF-LHLE.png" />
+    <BundleResource Include="Resources\PF-RHLE.png" />
+    <BundleResource Include="Resources\PF-FS.png" />
+    <BundleResource Include="Resources\PF-FH.png" />
+    <BundleResource Include="Resources\PF-GSL.png" />
+    <BundleResource Include="Resources\PF-GSS.png" />
+    <BundleResource Include="Resources\PF-GA.png" />
+    <BundleResource Include="Resources\PF-SA.png" />
+    <BundleResource Include="Resources\PF-WAL.png" />
+    <BundleResource Include="Resources\PF-WAM.png" />
+    <BundleResource Include="Resources\PF-LM.png" />
+    <BundleResource Include="Resources\PF-LTM.png" />
+    <BundleResource Include="Resources\PF-RTM.png" />
+    <BundleResource Include="Resources\Blank.png" />
+    <BundleResource Include="Resources\PF-SP.png" />
+    <BundleResource Include="Resources\PF-AP.png" />
+    <BundleResource Include="Resources\PF-HL55.png" />
+    <BundleResource Include="Resources\PF-HG66.png" />
+    <BundleResource Include="Resources\PF-HG60.png" />
+    <BundleResource Include="Resources\PF-HL60.png" />
+    <BundleResource Include="Resources\PF-AM.png" />
+    <BundleResource Include="Resources\PF-IM.png" />
+    <BundleResource Include="Resources\PF-SM.png" />
+    <BundleResource Include="Resources\Cleveland.png" />
+    <BundleResource Include="Resources\Ping.png" />
+    <BundleResource Include="Resources\Scotty Cameron.png" />
+    <BundleResource Include="Resources\Odyssey.png" />
+    <BundleResource Include="Resources\Taylormade.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
