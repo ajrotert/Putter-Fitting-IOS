@@ -14,7 +14,8 @@ namespace IOSApp
         private string[] _data;
         private int[] _userImportance;
         //public static int[] importanceLevel = { 3, 2, 1, 5, 3, 0, 4, 0, 1 }; //This needs to change with the changeing order
-/*Player Characteristics 
+/*Player Characteristics
+ * Ordering of traits(left) and their importance(right)
 3 Eyes dominate     1
 6 Height            0
 4 Swing path        5
