@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9A933F15-F43B-42A5-800E-DB67C8FBFAC6}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IOSApp</RootNamespace>
+    <AssemblyName>IOSApp</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: jeepwrangleraid@hotmail.com (FQXHR43G8Z)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>12317</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Andrew Rotert (N9WD753NH2)</CodesignKey>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <IntermediateOutputPath></IntermediateOutputPath>
+    <MtouchUseThumb></MtouchUseThumb>
+    <MtouchEnableBitcode></MtouchEnableBitcode>
+    <IpaIncludeArtwork></IpaIncludeArtwork>
+    <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
+    <OptimizePNGs></OptimizePNGs>
+    <MtouchDebug></MtouchDebug>
+    <IOSDebuggerPort></IOSDebuggerPort>
+    <MtouchI18n></MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <OnDemandResourcesInitialInstallTags></OnDemandResourcesInitialInstallTags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Andrew Rotert (FQXHR43G8Z)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>23014</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo60-60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo87-87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo120-120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo180-180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo40-40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo58-58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo80-80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo167-167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AILogo1024-1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="Iputter.cs" />
+    <Compile Include="PutterData.cs" />
+    <Compile Include="SaveData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PutterAILogo.png" />
+    <BundleResource Include="Resources\Background6.png" />
+    <BundleResource Include="Resources\LoadingLogo6.png" />
+    <BundleResource Include="Resources\PF-LHRE.png" />
+    <BundleResource Include="Resources\PF-RHRE.png" />
+    <BundleResource Include="Resources\PF-LHLE.png" />
+    <BundleResource Include="Resources\PF-RHLE.png" />
+    <BundleResource Include="Resources\PF-FS.png" />
+    <BundleResource Include="Resources\PF-FH.png" />
+    <BundleResource Include="Resources\PF-GSL.png" />
+    <BundleResource Include="Resources\PF-GSS.png" />
+    <BundleResource Include="Resources\PF-GA.png" />
+    <BundleResource Include="Resources\PF-SA.png" />
+    <BundleResource Include="Resources\PF-WAL.png" />
+    <BundleResource Include="Resources\PF-WAM.png" />
+    <BundleResource Include="Resources\PF-LM.png" />
+    <BundleResource Include="Resources\PF-LTM.png" />
+    <BundleResource Include="Resources\PF-RTM.png" />
+    <BundleResource Include="Resources\Blank.png" />
+    <BundleResource Include="Resources\PF-SP.png" />
+    <BundleResource Include="Resources\PF-AP.png" />
+    <BundleResource Include="Resources\PF-HL55.png" />
+    <BundleResource Include="Resources\PF-HG66.png" />
+    <BundleResource Include="Resources\PF-HG60.png" />
+    <BundleResource Include="Resources\PF-HL60.png" />
+    <BundleResource Include="Resources\PF-AM.png" />
+    <BundleResource Include="Resources\PF-IM.png" />
+    <BundleResource Include="Resources\PF-SM.png" />
+    <BundleResource Include="Resources\Cleveland.png" />
+    <BundleResource Include="Resources\Ping.png" />
+    <BundleResource Include="Resources\Scotty Cameron.png" />
+    <BundleResource Include="Resources\Odyssey.png" />
+    <BundleResource Include="Resources\Taylormade.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
