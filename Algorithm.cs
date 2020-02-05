@@ -19,7 +19,7 @@ namespace IOSApp
 6 Height            0
 4 Swing path        5
 
-Player Errors
+Player Errors             
 1 Left right miss   3
 2 Distance miss     2
 7 wrist movement    4
