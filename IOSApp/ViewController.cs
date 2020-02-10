@@ -34,9 +34,6 @@ namespace IOSApp
 
             generic = new UIToolbar(new CoreGraphics.CGRect(new nfloat(0.0f), new nfloat(0.0f), this.View.Frame.Size.Width, new nfloat(44.0f)));             generic.TintColor = UIColor.White;             generic.BarStyle = UIBarStyle.Black;             generic.Translucent = true;
             myButtong = new UIBarButtonItem("Importance Level (1 - 5): ",                  UIBarButtonItemStyle.Bordered, AddNull);             generic.Items = new UIBarButtonItem[]{           myButtong,            new UIBarButtonItem(UIBarButtonSystemItem.FlexibleSpace),             new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate             {                 ImportanceTextBox.ResignFirstResponder();             })             };             ImportanceTextBox.KeyboardAppearance = UIKeyboardAppearance.Dark;             ImportanceTextBox.InputAccessoryView = generic; 
-
-
-
             View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("Background6.png"));
 
             counter = 0;
