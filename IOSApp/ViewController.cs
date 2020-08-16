@@ -38,8 +38,7 @@ namespace IOSApp
 
             counter = 0;
             OLDM = new OptionsListDataModel(TitleLabel);
-            //counter = OLDM.SetData(counter);
-            //**OptionsList.Model = OLDM;
+
             ProgressBar.Progress = 0.1F;
 
             BackButton.Hidden = true;
@@ -101,7 +100,6 @@ namespace IOSApp
         {
             counter-=2;
             SetImages(true);
-            //**OptionsList.Model = OLDM;
             ImportanceTextBox.Text = "5";
             if (counter == 0)
                 BackButton.Hidden = true;
@@ -160,16 +158,6 @@ namespace IOSApp
         }
         public void Next_Clicked( coordinate c )
         {
-            /*if(SelectedButton.Title(UIControlState.Normal) == "Clicked")
-            {
-                SelectedButton.RemoveFromSuperview();
-            }
-            SelectedButton.SetTitle("Clicked", UIControlState.Normal);
-            OptionsList.Model.Selected(OptionsList, 0, 0);           
-            SelectedButton.SetTitle(OLDM.selected, UIControlState.Normal);
-            counter = OLDM.SetData(counter);
-            OptionsList.Model = OLDM;*/
-            //**OptionsList.Model.Selected(OptionsList, 0, 0);
             if (ImagesArray[counter, (int)c] != "Blank.png")
             {
                 DataCollection[counter] = ListNames[counter, (int)c];
@@ -191,8 +179,6 @@ namespace IOSApp
                     }
                     else
                     {
-                        //counter = OLDM.SetData(counter);
-                        //**OptionsList.Model = OLDM;
                         SetImages(true);
 
                         ImportanceTextBox.Text = "5";
@@ -235,10 +221,8 @@ namespace IOSApp
                 OneToFiveLabel2.Hidden = true;
                 HighLowLabel.Hidden = true;
                 BackButton.Hidden = true;
-                //**SelectedButton.Hidden = true;
                 InfoButton.Hidden = true;
                 TitleLabel.Text = "Brand Preference";
-                //OLDM.SetData(fit.putter.PutterBrands());
                 SetImages(false);
                 ptdata = fit.putter.PutterBrands();
                 if(ptdata[0] != null && ptdata.Length>0)
@@ -260,11 +244,7 @@ namespace IOSApp
             }
             else
             {
-                ResultsSetup();
-                ResultsTitleLabel.Text = "Results: ( " + results.Length + " )";
-                OLDM.SetData(results);
-                ResultsView.Model = OLDM;
-                PutterSpecsLabel.Text = "Length: " + fit.putter.PutterLength + Environment.NewLine + "Grip: " + fit.putter.PutterGrip;
+                LoadResults(results.Length, results);
             }
 
         }
@@ -272,7 +252,6 @@ namespace IOSApp
 
         public void Brand_Clicked( coordinate c )
         {
-            //**OptionsList.Model.Selected(OptionsList, 0, 0);
             string selected = ptdata[(int)c];
             List<string> BrandResults = new List<string>();
             for(int a = 0; a < results.Length; a++)
@@ -280,27 +259,29 @@ namespace IOSApp
                 if (results[a].Contains(selected))
                     BrandResults.Add(results[a]);
             }
-            //UIAlertView _error = new UIAlertView("My Title Text", "" + BrandResults.Count, null, "Ok", null);
-            //_error.Show();
+ 
+            LoadResults(BrandResults.Count, BrandResults.ToArray());
+        }
 
+        public void LoadResults(int itemCount, string[] resultsArray)
+        {
             ResultsSetup();
-            ResultsTitleLabel.Text = "Results: ( " + BrandResults.Count + " )";
-            OLDM.SetData(BrandResults.ToArray());
+            ResultsTitleLabel.Text = "Results: ( " + itemCount + " )";
+            OLDM.SetData(resultsArray);
             ResultsView.Model = OLDM;
             PutterSpecsLabel.Text = "Length: " + fit.putter.PutterLength + Environment.NewLine + "Grip: " + fit.putter.PutterGrip;
+            ShowMore_Clicked(new UIButton());
         }
 
         public void ResultsSetup()
         {
             PCTitle.Hidden = true;
             TitleLabel.Hidden = true;
-            //OptionsList.Hidden = true;
             ImportanceLevelLabel.Hidden = true;
             ImportanceTextBox.Hidden = true;
             OneToFiveLabel2.Hidden = true;
             HighLowLabel.Hidden = true;
             BackButton.Hidden = true;
-            //**SelectedButton.Hidden = true;
             ProgressBar.Hidden = true;
             InfoButton.Hidden = true;
 
@@ -329,13 +310,11 @@ namespace IOSApp
             ProgressBar.Progress = 0.1F;
             PCTitle.Hidden = false;
             TitleLabel.Hidden = false;
-            //**OptionsList.Hidden = false;
             ImportanceLevelLabel.Hidden = false;
             ImportanceTextBox.Hidden = false;
             OneToFiveLabel2.Hidden = false;
             HighLowLabel.Hidden = false;
             BackButton.Hidden = false;
-            //**SelectedButton.Hidden = false;
             ProgressBar.Hidden = false;
             PlayCharLabel.Hidden = false;
             InfoButton.Hidden = false;
@@ -346,9 +325,6 @@ namespace IOSApp
             BottomRight_Button.Hidden = false;
 
             counter = -1;
-            //OLDM = new OptionsListDataModel(TitleLabel);
-            //counter = OLDM.SetData(counter);
-            //**OptionsList.Model = OLDM;
 
             SetImages(true);
 
